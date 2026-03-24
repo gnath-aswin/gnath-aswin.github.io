@@ -16,6 +16,7 @@
   --yellow: #ffd93b;
 
   --border: #111111;
+  --section-border: 2px solid var(--border);
   --shadow: 6px 6px 0 #111111;
 }
 
@@ -58,7 +59,7 @@ a {
   z-index: 50;
   background: rgba(236, 236, 236, 0.94);
   backdrop-filter: blur(8px);
-  border-bottom: 3px solid var(--border);
+  border-bottom: 2px solid var(--border);
 }
 
 .nav {
@@ -106,7 +107,8 @@ a {
    HERO / INTRO SECTION
 ========================================================= */
 .hero {
-  padding: 42px 0;
+  padding: 80px 0;
+  border-bottom: none;
 }
 
 /* Two-column layout:
@@ -397,13 +399,12 @@ a {
    GENERIC SECTIONS
 ========================================================= */
 .section {
-  padding: 26px 0 54px;
+  padding: 80px 0;
+  border-top: 1px solid rgba(0,0,0,0.1);
 }
 
 .alt {
   background: #e4e4e4;
-  border-top: 3px solid var(--border);
-  border-bottom: 3px solid var(--border);
 }
 
 .section-head {
@@ -630,4 +631,98 @@ a {
   .secondary-btn {
     width: 100%;
   }
+}
+
+/* ==================================================
+  Layout with text left and video right 
+  ===================================================*/
+
+.video-layout {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 24px;
+  align-items: center;
+}
+
+.project-video video {
+  width: 100%;
+  border: 3px solid var(--border);
+  box-shadow: 4px 4px 0 var(--border);
+  border-radius: 10px;
+}
+
+.project-text {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 900px) {
+
+  .video-layout {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+/* =========================================================
+   Background for each sections
+========================================================= */
+
+#home {
+  background: #ececec;
+}
+
+#projects {
+  background: linear-gradient(
+    180deg,
+    #eaf3ff 0%,
+    #ffffff 100%
+  );
+}
+
+#publications {
+  background: #f7f1ff;
+}
+
+#experience {
+  background: #e9f8ef;
+}
+
+#contact {
+  background: #fff6e6;
+}
+
+
+
+/* =========================================================
+   Contact form
+========================================================= */
+.contact-form {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 12px;
+  border: 2px solid var(--border);
+  background: var(--paper);
+  font-family: inherit;
+  font-size: 0.95rem;
+}
+
+.form-group textarea {
+  resize: vertical;
 }

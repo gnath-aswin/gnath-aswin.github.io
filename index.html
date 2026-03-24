@@ -4,12 +4,35 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Aswin G Nath | ML • Simulation • Intelligent Systems</title>
-  <meta name="description" content="Portfolio of Aswin G Nath — reinforcement learning, robotics, simulation, FEM, and multimodal AI." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta
+    name="description"
+    content="Portfolio of Aswin G Nath — reinforcement learning, robotics, simulation, FEM, and multimodal AI."
+  />
+
+  <!-- Google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Font Awesome icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+
+  <!-- Your stylesheet -->
   <link rel="stylesheet" href="./style.css" />
+
+  <style>
+    /* Small navbar improvement: highlight active section link */
+    .menu a.active {
+      background: var(--blue, #2f7df6);
+      color: #fff;
+    }
+  </style>
 </head>
 <body>
   <header class="site-header">
@@ -18,10 +41,10 @@
         <span class="brand-mark"></span>
         <span>Aswin G Nath</span>
       </a>
+
       <nav class="menu">
         <a href="#home">Home</a>
-        <a href="#featured">Featured</a>
-        <a href="#media">Media</a>
+        <a href="#projects">Projects</a>
         <a href="#publications">Publications</a>
         <a href="#experience">Experience</a>
         <a href="#contact">Contact</a>
@@ -30,67 +53,81 @@
   </header>
 
   <main id="top">
+    <!-- HOME -->
     <section class="hero" id="home">
       <div class="container hero-grid">
+        <!-- LEFT COLUMN -->
         <aside class="profile-card">
           <div class="avatar-ring">
             <div class="avatar">AG</div>
           </div>
+
           <h1>Aswin G Nath</h1>
           <p class="role">Machine Learning Engineer</p>
-          <p class="subrole">ML · Simulation · Intelligent Systems </p>
+          <p class="subrole">ML · Simulation · Intelligent Systems</p>
 
-          <!-- <div class="affiliation">
-            <a href="#">University of the Bundeswehr Munich</a>
-          </div> -->
-
-         <div class="socials">
-            <a href="mailto:aswingnath95@gmail.com">
-                <i class="fa-solid fa-envelope"></i>
+          <div class="socials">
+            <a href="mailto:aswingnath95@gmail.com" aria-label="Email">
+              <i class="fa-solid fa-envelope"></i>
             </a>
 
-            <a href="https://www.linkedin.com/in/aswingnath" target="_blank" rel="noreferrer">
-                <i class="fa-brands fa-linkedin"></i>
+            <a
+              href="https://www.linkedin.com/in/aswingnath"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="LinkedIn"
+            >
+              <i class="fa-brands fa-linkedin"></i>
             </a>
 
-            <a href="https://github.com/aswingnath" target="_blank">
-                <i class="fa-brands fa-github"></i>
+            <a
+              href="https://github.com/aswingnath"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="GitHub"
+            >
+              <i class="fa-brands fa-github"></i>
             </a>
 
-            <a href="https://scholar.google.com/citations?user=Qw7GrWwAAAAJ&hl=en" target="_blank">
-                <i class="fa-solid fa-graduation-cap"></i>
+            <a
+              href="https://scholar.google.com/citations?user=Qw7GrWwAAAAJ&hl=en"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Google Scholar"
+            >
+              <i class="fa-solid fa-graduation-cap"></i>
             </a>
-        </div>
+          </div>
         </aside>
 
-          <div class="hero-content">
-              <p>
-                I'm <strong>Aswin G Nath</strong>, a machine learning engineer and researcher working at the
-                intersection of reinforcement learning, simulation, and robotics.
-              </p>
+        <!-- RIGHT COLUMN -->
+        <div class="hero-content">
+          <p>
+            I'm <strong>Aswin G Nath</strong>, a machine learning engineer and researcher working at
+            the intersection of reinforcement learning, simulation, and robotics.
+          </p>
 
-              <p>
-                I have experience developing reinforcement learning systems for robot navigation,
-                fine-tuning video language models for manufacturing applications, and building
-                simulation tools for patient-specific medical device design.
-              </p>
+          <p>
+            I have experience developing reinforcement learning systems for robot navigation,
+            fine-tuning video language models for manufacturing applications, and building
+            simulation tools for patient-specific medical device design.
+          </p>
 
-              <div class="research-interests">
-                <h3>Research Interests</h3>
-                <div class="research-tags">
-                  <span>Reinforcement Learning</span>
-                  <span>Simulation &amp; Physics-based Modeling</span>
-                  <span>Robotics &amp; Autonomous Systems</span>
-                  <span>Medical Device Design</span>
-                  <span>Multimodal AI</span>
-                </div>
-              </div>
-
-              <div class="cta-row">
-                <a class="primary-btn" href="#featured">See Featured Work</a>
-                <a class="secondary-btn" href="#contact">Get in Touch</a>
-              </div>
+          <div class="research-interests">
+            <h3>Research Interests</h3>
+            <div class="research-tags">
+              <span>Reinforcement Learning</span>
+              <span>Simulation &amp; Physics-based Modeling</span>
+              <span>Robotics &amp; Autonomous Systems</span>
+              <span>Medical Device Design</span>
+              <span>Multimodal AI</span>
             </div>
+          </div>
+
+          <div class="cta-row">
+            <a class="primary-btn" href="#projects">See Projects</a>
+            <a class="secondary-btn" href="#contact">Get in Touch</a>
+          </div>
 
           <div class="stats">
             <div class="stat">
@@ -101,7 +138,7 @@
             <div class="stat">
               <span>Focus</span>
               <strong>RL · FEM · Robotics</strong>
-              <small>Simulation & control</small>
+              <small>Simulation &amp; control</small>
             </div>
             <div class="stat">
               <span>Background</span>
@@ -113,36 +150,62 @@
       </div>
     </section>
 
-    <section class="section" id="featured">
+    <!-- PROJECTS -->
+    <section class="section" id="projects">
       <div class="container">
         <div class="section-head">
-          <div class="chip">Featured</div>
-          <h3>Research Highlights</h3>
+          <div class="chip">Projects</div>
+          <h3>Selected Projects</h3>
           <p>Projects that best represent my profile in simulation, robotics, and machine learning.</p>
         </div>
 
         <div class="feature-list">
-          <article class="feature-card">
-            <div class="feature-top">
-              <div>
-                <h4>Autonomous Stent Design Assistant</h4>
-                <p>Deep RL + finite element simulation + spline-based geometry modeling for patient-specific design.</p>
-              </div>
-              <span class="tag green">Simulation / FEM</span>
+
+            <article class="feature-card video-layout">
+
+            <div class="project-video">
+              <video controls muted loop>
+                <source src="videos/Media3.webm" type="video/mp4">
+              </video>
             </div>
-            <div class="link-row">
-              <a href="#">Project</a>
-              <a href="#">Paper</a>
-              <a href="#">Code</a>
-              <a href="#">Demo</a>
+
+            <div class="project-text">
+              <div class="feature-top">
+                <div>
+                  <h4>Mobile Robot Navigation with Reinforcement Learning</h4>
+                  <p>
+                    Implemented DQN, DDPG, PPO, and SAC for robot navigation in
+                    simulated environments using ROS and Gazebo.
+                  </p>
+                </div>
+
+                <span class="tag purple">Robotics</span>
+              </div>
+
+              <div class="link-row">
+                <a href="#">Project</a>
+                <a href="#">Paper</a>
+                <a href="#">Code</a>
+                <a href="#">Video</a>
+              </div>
+
             </div>
           </article>
 
-          <article class="feature-card">
-            <div class="feature-top">
+          <article class="feature-card video-layout">
+            <div class="project-video">
+              <video controls muted loop>
+                <source src="videos/Media2.webm" type="video/mp4">
+              </video>
+            </div>
+            <div class="project text">
+              <div class="feature-top">
               <div>
                 <h4>Video Language Models for Manufacturing</h4>
-                <p>Fine-tuned multimodal models for assembly action recognition and production-oriented prototyping.</p>
+                <p>
+                  Fine-tuned multimodal models for assembly action recognition and
+                  production-oriented prototyping.
+                </p>
               </div>
               <span class="tag blue">Multimodal AI</span>
             </div>
@@ -158,7 +221,10 @@
             <div class="feature-top">
               <div>
                 <h4>Mobile Robot Navigation with Reinforcement Learning</h4>
-                <p>Implemented DQN, DDPG, PPO, and SAC for decision-making and navigation in simulation.</p>
+                <p>
+                  Implemented DQN, DDPG, PPO, and SAC for decision-making and navigation in
+                  simulated environments.
+                </p>
               </div>
               <span class="tag purple">Robotics</span>
             </div>
@@ -173,35 +239,8 @@
       </div>
     </section>
 
-    <section class="section alt" id="media">
-      <div class="container">
-        <div class="section-head">
-          <div class="chip">Media</div>
-          <h3>What I would showcase here</h3>
-          <p>This section is ideal for visual proof: rollout videos, reward curves, FEM renders, mesh screenshots, and experiment dashboards.</p>
-        </div>
-
-        <div class="media-grid">
-          <div class="media-card">
-            <div class="thumb thumb-green"></div>
-            <h4>RL Training Visuals</h4>
-            <p>Reward curves, episode returns, policy rollouts, and experiment comparisons.</p>
-          </div>
-          <div class="media-card">
-            <div class="thumb thumb-blue"></div>
-            <h4>Simulation / FEM Renders</h4>
-            <p>Beam meshes, stent geometry, deformation views, and design pipeline screenshots.</p>
-          </div>
-          <div class="media-card">
-            <div class="thumb thumb-yellow"></div>
-            <h4>Robotics Demos</h4>
-            <p>Navigation environments, planner views, Gazebo screenshots, and control results.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="publications">
+    <!-- PUBLICATIONS -->
+    <section class="section alt" id="publications">
       <div class="container">
         <div class="section-head">
           <div class="chip">Publications</div>
@@ -212,7 +251,10 @@
         <div class="pub-list">
           <article class="pub-item">
             <h4>Exploring Reward Shaping in Discrete and Continuous Action Spaces</h4>
-            <p>A deep reinforcement learning study on TurtleBot3 focused on policy behavior and reward formulation.</p>
+            <p>
+              A deep reinforcement learning study on TurtleBot3 focused on policy behavior and reward
+              formulation.
+            </p>
             <div class="link-row">
               <a href="#">Paper</a>
               <a href="#">Project</a>
@@ -241,7 +283,8 @@
       </div>
     </section>
 
-    <section class="section alt" id="experience">
+    <!-- EXPERIENCE -->
+    <section class="section" id="experience">
       <div class="container">
         <div class="section-head">
           <div class="chip">Experience</div>
@@ -253,45 +296,126 @@
           <article class="timeline-item">
             <div class="time">Apr 2025 – Present · Munich, Germany</div>
             <h4>Research Associate · Universität der Bundeswehr München</h4>
-            <p>Developing an autonomous design assistant for endovascular aneurysm repair and extending simulation tooling for patient-specific stent design.</p>
+            <p>
+              Developing an autonomous design assistant for endovascular aneurysm repair and extending
+              simulation tooling for patient-specific stent design.
+            </p>
           </article>
 
           <article class="timeline-item">
             <div class="time">Jul 2024 – Jan 2025 · Oberkochen, Germany</div>
             <h4>Machine Learning Intern · ZEISS</h4>
-            <p>Fine-tuned video language models for assembly action recognition and built production-oriented prototypes with PyTorch and Azure DevOps.</p>
+            <p>
+              Fine-tuned video language models for assembly action recognition and built
+              production-oriented prototypes with PyTorch and Azure DevOps.
+            </p>
           </article>
 
           <article class="timeline-item">
             <div class="time">Sep 2023 – Jul 2024 · Bochum, Germany</div>
             <h4>Academic Research Assistant · RUB Bochum</h4>
-            <p>Implemented graph-search motion planning and reinforcement learning methods for mobile robot navigation in simulation.</p>
+            <p>
+              Implemented graph-search motion planning and reinforcement learning methods for mobile
+              robot navigation in simulation.
+            </p>
           </article>
 
           <article class="timeline-item">
             <div class="time">Nov 2020 – Aug 2023 · Bochum, Germany</div>
             <h4>Student Research Assistant · Lidrotec</h4>
-            <p>Worked on process optimization, microscope image analysis, and automated measurement tooling for laser dicing systems.</p>
+            <p>
+              Worked on process optimization, microscope image analysis, and automated measurement
+              tooling for laser dicing systems.
+            </p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section" id="contact">
+    <!-- CONTACT -->
+    <section class="section alt" id="contact">
       <div class="container">
-        <div class="contact-panel">
-          <div>
-            <div class="chip">Contact</div>
-            <h3>Interested in reinforcement learning, robotics, or simulation-driven engineering roles.</h3>
-            <p>Reach out for collaborations, applied ML roles, research opportunities, or engineering discussions.</p>
-          </div>
-          <div class="contact-actions">
-            <a class="primary-btn" href="mailto:aswingnath95@gmail.com">Email Me</a>
-            <a class="secondary-btn" href="https://linkedin.com/in/aswin-g-nath-a2a0b9b7" target="_blank" rel="noreferrer">LinkedIn</a>
-          </div>
+
+        <div class="section-head">
+          <div class="chip">Contact</div>
+          <h3>Send me a message</h3>
+          <p>Feel free to reach out for collaborations, research discussions, or ML opportunities.</p>
         </div>
-      </div>
-    </section>
+
+        <form class="contact-form" id="contact-form" action="https://formspree.io/f/xkoqdzrv" method="POST">
+        <div class="form-group">
+          <label>Name</label>
+          <input type="text" name="name" required>
+        </div>
+
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+          <label>Subject</label>
+          <input type="text" name="subject">
+        </div>
+
+        <div class="form-group">
+          <label>Message</label>
+          <textarea name="message" rows="5" required></textarea>
+        </div>
+
+        <button class="primary-btn" type="submit">Send Message</button>
+        <p id="form-status"></p>
+      </form>
+
+      <script>
+        const form = document.getElementById("contact-form");
+        const status = document.getElementById("form-status");
+
+        form.addEventListener("submit", async function (e) {
+          e.preventDefault();
+
+          const data = new FormData(form);
+
+          const response = await fetch(form.action, {
+            method: "POST",
+            body: data,
+            headers: {
+              "Accept": "application/json"
+            }
+          });
+
+          if (response.ok) {
+            status.textContent = "Thanks — your message has been sent.";
+            form.reset();
+          } else {
+            status.textContent = "Something went wrong. Please try again.";
+          }
+        });
+      </script>
   </main>
+
+  <script>
+    const sections = document.querySelectorAll("main section[id]");
+    const navLinks = document.querySelectorAll(".menu a");
+
+    window.addEventListener("scroll", () => {
+      let current = "";
+
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop - 120;
+        const sectionHeight = section.offsetHeight;
+        if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+          current = section.getAttribute("id");
+        }
+      });
+
+      navLinks.forEach((link) => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === `#${current}`) {
+          link.classList.add("active");
+        }
+      });
+    });
+  </script>
 </body>
 </html>
