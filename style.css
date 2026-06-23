@@ -663,9 +663,10 @@ overflow: hidden;
 
 /* Videos keep their natural landscape ratio */
 .project-video video {
-width: 100%;
-height: auto;
-display: block;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
 }
 
 /* Images keep their full natural aspect ratio */
