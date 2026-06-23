@@ -49,6 +49,11 @@
         <a href="#experience">Experience</a>
         <a href="#contact">Contact</a>
       </nav>
+      <button class="theme-toggle" id="theme-toggle" type="button"
+              aria-label="Switch to dark mode">
+        <span class="theme-icon">◐</span>
+        <span class="theme-label">Dark</span>
+      </button>
     </div>
   </header>
 
@@ -155,31 +160,34 @@
       <div class="container">
         <div class="section-head">
           <div class="chip">Projects</div>
-          <h3>Selected Projects</h3>
+          <h3>Projects</h3>
           <p>Projects that best represent my profile in simulation, robotics, and machine learning.</p>
         </div>
 
         <div class="feature-list">
-
             <article class="feature-card video-layout">
 
             <div class="project-video">
               <video controls muted loop>
-                <source src="data/web_ready.mp4" type="video/mp4">
+                <source src="data/mirage_g1_cafe.mp4" type="video/mp4">
               </video>
             </div>
 
             <div class="project-text">
               <div class="feature-top">
                 <div>
-                  <h4>Sports Analytics</h4>
+                  <h4>Photorealistic Environment for Robotics Simulation</h4>
                   <p>
-                    Implemented DQN, DDPG, PPO, and SAC for robot navigation in
-                    simulated environments using ROS and Gazebo.
+                    Designed and implemented an OpenGL-based 3D Gaussian Splatting (3DGS) renderer for visually realistic 
+                    robotics environments. Developed a real-time pipeline evolving from point rendering to 
+                    covariance-based Gaussian ellipses, addressing challenges in depth ordering, GPU data layout and rendering performance. 
+                    Ensured stable execution through proper OpenGL resource management and system-level debugging.
+                    <br>
+                    Tags: OpenGL · C++ · Gaussian Splatting · Rendering · Robotics Simulation · GPU
                   </p>
                 </div>
 
-                <span class="tag purple">CV</span>
+                <span class="tag purple">3D Render</span>
               </div>
 
               <div class="link-row">
@@ -192,28 +200,45 @@
             </div>
           </article>
 
+      
           <article class="feature-card video-layout">
             <div class="project-video">
               <video controls muted loop>
-                <source src="data/Media2.webm" type="video/mp4">
+                <source src="data/sorting_video.mp4" type="video/mp4">
               </video>
             </div>
-            <div class="project text">
+            <div class="project-text">
               <div class="feature-top">
               <div>
-                <h4>Video Language Models for Manufacturing</h4>
+                <h4>Vision-Guided Robot Cell Simulation</h4>
                 <p>
-                  Fine-tuned multimodal models for assembly action recognition and
-                  production-oriented prototyping.
+                  Built a MuJoCo-based manipulation cell for detecting, grasping, lifting, and sorting colored
+                  parts with a 6-DOF robot arm and gripper. Integrated overhead-camera perception using  
+                  ROI masking, and oriented bounding-box estimation, together with a pick–lift–move–release controller 
+                  and grasp-contact validation.                 </p>
+              </div>
+              <span class="tag blue">Vision & RL</span>
+            </div>
+          </article>
+
+          <article class="feature-card video-layout">
+            <div class="project-video">
+              <img assembly detection >
+                <img src="data/3d_vis_.gif" type="video/mp4">
+              </img>
+            </div>
+            <div class="project-text">
+              <div class="feature-top">
+              <div>
+                <h4>3D Bounding Box Prediction</h4>
+                <p>
+                  Built an end-to-end PyTorch pipeline for predicting 3D bounding boxes from point-cloud data
+                  using a PointNet-style model, custom preprocessing, weighted geometry-aware losses, MLflow tracking,
+                  and Optuna tuning. Improved mean IoU from 0.38 to 0.60 through better loss design, yaw modeling,
+                  and training stability, then exported the model to ONNX for nearly 2× faster inference.
                 </p>
               </div>
-              <span class="tag blue">Multimodal AI</span>
-            </div>
-            <div class="link-row">
-              <a href="#">Project</a>
-              <a href="#">Report</a>
-              <a href="#">Code</a>
-              <a href="#">Results</a>
+              <span class="tag blue">3D Vision</span>
             </div>
           </article>
 
@@ -242,28 +267,63 @@
             </div>
           </article>
 
+            <article class="feature-card video-layout">
 
-          <article class="feature-card">
-            <div class="feature-top">
-              <div>
-                <h4>Mobile Robot Navigation with Reinforcement Learning</h4>
-                <p>
-                  Implemented DQN, DDPG, PPO, and SAC for decision-making and navigation in
-                  simulated environments.
-                </p>
-              </div>
-              <span class="tag purple">Robotics</span>
+            <div class="project-video">
+              <video controls muted loop>
+                <source src="data/web_ready.mp4" type="video/mp4">
+              </video>
             </div>
-            <div class="link-row">
-              <a href="#">Project</a>
-              <a href="#">Paper</a>
-              <a href="#">Code</a>
-              <a href="#">Video</a>
+
+            <div class="project-text">
+              <div class="feature-top">
+                <div>
+                  <h4>Sports Analytics</h4>
+                  <p>
+                    Built a pipeline for dynamic football scene understanding using YOLOv8 for detection 
+                    and ByteTrack for multi-object tracking of players, referees, and the ball. Applied 
+                    homography with pitch landmark estimation to map detections into a top-down tactical view, 
+                    enabling spatial analysis and player movement insights.
+                  </p>
+                </div>
+
+                <span class="tag purple">CV</span>
+              </div>
+
+              <div class="link-row">
+                <a href="#">Project</a>
+                <a href="#">Paper</a>
+                <a href="#">Code</a>
+                <a href="#">Video</a>
+              </div>
+
             </div>
           </article>
-        </div>
-      </div>
-    </section>
+
+          <article class="feature-card video-layout">
+            <div class="project-video">
+              <image assembly detection >
+                <image src="data/zeiss.png" type="image/png">
+              </image>
+            </div>
+            <div class="project-text">
+              <div class="feature-top">
+              <div>
+                <h4>Video Language Models for Manufacturing</h4>
+                <p>
+                  Built a multimodal system for human-object interaction detection and action-status 
+                  recognition in assembly workflows. Fine-tuned LLaVA-1.5 (7B) with LoRA on the ZEISS Workshop 
+                  Dataset (~50 annotated assembly videos, 650k+ data points) to support applications 
+                  such as assembly monitoring, anomaly detection, and real-time manufacturing assistance. 
+                  Improved temporal understanding through knowledge distillation and deployed the inference pipeline 
+                  in a real-time Azure DevOps workflow.
+                </p>
+              </div>
+              <span class="tag blue">Multimodal AI</span>
+            </div>
+          </article>
+
+
 
     <!-- PUBLICATIONS -->
     <section class="section alt" id="publications">
@@ -441,6 +501,36 @@
           link.classList.add("active");
         }
       });
+    });
+    const themeToggle = document.getElementById("theme-toggle");
+    const themeLabel = themeToggle.querySelector(".theme-label");
+
+    function setTheme(theme) {
+      document.documentElement.dataset.theme = theme;
+      localStorage.setItem("portfolio-theme", theme);
+
+      const isDark = theme === "dark";
+      themeLabel.textContent = isDark ? "Light" : "Dark";
+
+      themeToggle.setAttribute(
+        "aria-label",
+        isDark ? "Switch to light mode" : "Switch to dark mode"
+      );
+    }
+
+    const savedTheme = localStorage.getItem("portfolio-theme");
+
+    const initialTheme =
+      savedTheme ||
+      (window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? "dark"
+        : "light");
+
+    setTheme(initialTheme);
+
+    themeToggle.addEventListener("click", () => {
+      const currentTheme = document.documentElement.dataset.theme;
+      setTheme(currentTheme === "dark" ? "light" : "dark");
     });
   </script>
 </body>

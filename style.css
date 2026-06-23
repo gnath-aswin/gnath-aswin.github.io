@@ -646,30 +646,45 @@ a {
   ===================================================*/
 
 .video-layout {
-  display: grid;
-  grid-template-columns: 380px 1fr;
-  gap: 24px;
-  align-items: center;
+display: grid;
+grid-template-columns: 380px minmax(0, 1fr);
+gap: 24px;
+align-items: start;
 }
 
+.project-video {
+width: 100%;
+min-width: 0;
+border: 3px solid var(--border);
+box-shadow: 4px 4px 0 var(--border);
+border-radius: 10px;
+overflow: hidden;
+}
+
+/* Videos keep their natural landscape ratio */
 .project-video video {
-  width: 100%;
-  border: 3px solid var(--border);
-  box-shadow: 4px 4px 0 var(--border);
-  border-radius: 10px;
+width: 100%;
+height: auto;
+display: block;
+}
+
+/* Images keep their full natural aspect ratio */
+.project-video img {
+width: 100%;
+height: auto;
+display: block;
 }
 
 .project-text {
-  display: flex;
-  flex-direction: column;
+min-width: 0;
+display: flex;
+flex-direction: column;
 }
 
 @media (max-width: 900px) {
-
-  .video-layout {
-    grid-template-columns: 1fr;
-  }
-
+.video-layout {
+grid-template-columns: 1fr;
+}
 }
 
 /* =========================================================
@@ -733,4 +748,129 @@ a {
 
 .form-group textarea {
   resize: vertical;
+}
+
+/* =========================================================
+THEME TOKENS
+========================================================= */
+:root {
+--bg: #ececec;
+--paper: #ffffff;
+--text: #111722;
+--muted: #3d4657;
+
+--green: #71ef87;
+--blue: #2f7df6;
+--blue-dark: #1e63c9;
+--purple: #4531d8;
+--yellow: #ffd93b;
+
+--border: #111111;
+--shadow-color: #111111;
+
+--header-bg: rgba(236, 236, 236, 0.94);
+--social-bg: #f7f7f7;
+
+--home-bg: #ececec;
+--projects-bg: linear-gradient(180deg, #eaf3ff 0%, #ffffff 100%);
+--publications-bg: #f7f1ff;
+--experience-bg: #e9f8ef;
+--contact-bg: #fff6e6;
+
+--section-border: 2px solid var(--border);
+--shadow: 6px 6px 0 var(--shadow-color);
+}
+
+/* Dark theme */
+[data-theme="dark"] {
+--bg: #10131a;
+--paper: #1b2130;
+--text: #f3f6ff;
+--muted: #b5bfd3;
+
+--green: #63dc7e;
+--blue: #5b93ff;
+--blue-dark: #9ec0ff;
+--purple: #b5a8ff;
+--yellow: #ffd95c;
+
+--border: #e8edf8;
+--shadow-color: #080a0f;
+
+--header-bg: rgba(16, 19, 26, 0.94);
+--social-bg: #252d3d;
+
+--home-bg: #10131a;
+--projects-bg: linear-gradient(180deg, #121c2d 0%, #10131a 100%);
+--publications-bg: #1c1629;
+--experience-bg: #10231d;
+--contact-bg: #292116;
+}
+
+/* Replace fixed background values with these */
+.site-header {
+background: var(--header-bg);
+}
+
+.socials a {
+background: var(--social-bg);
+}
+
+.alt {
+background: var(--bg);
+}
+
+#home {
+background: var(--home-bg);
+}
+
+#projects {
+background: var(--projects-bg);
+}
+
+#publications {
+background: var(--publications-bg);
+}
+
+#experience {
+background: var(--experience-bg);
+}
+
+#contact {
+background: var(--contact-bg);
+}
+
+/* Make pale tags readable in dark mode */
+[data-theme="dark"] .tag.blue {
+background: #263e69;
+color: var(--text);
+}
+
+[data-theme="dark"] .tag.purple {
+background: #3a2f67;
+color: var(--text);
+}
+
+/* Theme toggle */
+.theme-toggle {
+display: inline-flex;
+align-items: center;
+gap: 8px;
+padding: 10px 14px;
+background: var(--paper);
+color: var(--text);
+border: 3px solid var(--border);
+box-shadow: 3px 3px 0 var(--border);
+font: inherit;
+font-weight: 800;
+cursor: pointer;
+}
+
+.theme-toggle:hover,
+.theme-toggle:focus-visible {
+transform: translate(-2px, -2px);
+}
+
+.theme-icon {
+font-size: 1.1rem;
 }
