@@ -875,3 +875,46 @@ transform: translate(-2px, -2px);
 .theme-icon {
 font-size: 1.1rem;
 }
+
+/* Tags
+ */
+
+.project-tech {
+  margin-top: 12px;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.project-tech strong {
+  font-weight: 700;
+}
+
+.project-tech span {
+  font-weight: 600;
+}
+
+.tech-blue {
+  color: #2f7df6;
+}
+
+.tech-purple {
+  color: #8b5cf6;
+}
+
+.tech-green {
+  color: #16a34a;
+}
+
+.tech-orange {
+  color: #f97316;
+}
+
+.project-text {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.project-footer {
+    margin-top: auto;
+}
